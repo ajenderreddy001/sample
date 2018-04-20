@@ -1,6 +1,5 @@
 package com.company;
 
-import com.sun.org.apache.xerces.internal.impl.xpath.regex.Match;
 
 public class MysteryLoveLetter {
     public long minimum(String s){

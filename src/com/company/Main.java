@@ -7,15 +7,30 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class Main {
     static String[] strings;
     public static void main(String[] args){
-//        set();
+          set();
 //        System.out.println(new GemStone().numberOfMinerals(strings));
-        System.out.println(new MysteryLoveLetter().minimum("abc"));
+        //System.out.println(new MysteryLoveLetter().minimum("abc"));
+        //Arrays.fill(strings,"ajay");
+        HashMap<Integer,String> hashMap= new HashMap<>();
+        Arrays.asList(strings).stream()
+                .map(s -> s.length())
+                .distinct()
+                .sorted()
+                .map(integer -> {
+                    hashMap.put(integer,"Ajay");
+                return integer;
+                })
+                .forEach(System.out::print);
+        Arrays.asList(strings).stream()
+                .sorted()
+                .forEach(System.out::println);
     }
 
 
