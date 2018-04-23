@@ -1,36 +1,34 @@
 package com.company;
 
-import org.omg.CORBA.Environment;
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class Main {
     static String[] strings;
     public static void main(String[] args){
-          set();
+//          set();
 //        System.out.println(new GemStone().numberOfMinerals(strings));
         //System.out.println(new MysteryLoveLetter().minimum("abc"));
         //Arrays.fill(strings,"ajay");
-        HashMap<Integer,String> hashMap= new HashMap<>();
-        Arrays.asList(strings).stream()
-                .map(s -> s.length())
-                .distinct()
-                .sorted()
-                .map(integer -> {
-                    hashMap.put(integer,"Ajay");
-                return integer;
-                })
-                .forEach(System.out::print);
-        Arrays.asList(strings).stream()
-                .sorted()
-                .forEach(System.out::println);
+//        HashMap<String,Integer> hashMap= new HashMap<>();
+//        Arrays.asList(strings).stream()
+//                .distinct()
+//                .sorted()
+//                .map(s -> {
+//                    hashMap.put(s,(int)new MysteryLoveLetter().minimum(s));
+//                    return s;
+//                })
+//                .forEach(System.out::print);
+//        hashMap.entrySet()
+//                .stream()
+//                .map(e -> e.getValue())
+//                .forEach(System.out::println);
+//        System.out.println(new PalindromeIndex().palindromeIndex("bcba"));
+        System.out.println(new Anagram().gameOfThrones("cdefghmnopqrstuvw"));
     }
 
 
@@ -45,7 +43,8 @@ public class Main {
                     .map(s -> s.trim())
                     .filter(s -> !s.isEmpty())
                     .collect(Collectors.toList());
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             e.printStackTrace();
         }
         strings=list.toArray(new String[list.size()]);list.clear();

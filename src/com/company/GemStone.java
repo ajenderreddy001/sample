@@ -22,7 +22,7 @@ public class GemStone {
                     map.replace(nextString.charAt(i),j+1);
                 }
             }
-            final int l=j+1;
+            int l=j+1;
             map.entrySet().removeIf(e ->e.getValue() != l);
         }
         return map.keySet().size();
