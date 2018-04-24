@@ -2,6 +2,7 @@ package com.company;
 
 import java.io.File;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +29,10 @@ public class Main {
 //                .map(e -> e.getValue())
 //                .forEach(System.out::println);
 //        System.out.println(new PalindromeIndex().palindromeIndex("bcba"));
-        System.out.println(new Anagram().gameOfThrones("cdefghmnopqrstuvw"));
+//        new PowerSet().print(new int[]{});
+        Fibonacci f=new Fibonacci();
+        System.out.println(f.fibo(5000)+" "+f.fiboByMemorization(50));
+        System.out.println(f.map.toString());
     }
 
 
